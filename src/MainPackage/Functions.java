@@ -7,11 +7,13 @@ public abstract class Functions {
         for(int i= (minusNumber)? 1 : 0; i<line.length(); i++){
             if(line.charAt(i) == '.')
                 dot++;
-            if(line.charAt(i) > 57 || (line.charAt(i) < 48 && line.charAt(i) != 46))
+            else if(line.charAt(i) > 57 || (line.charAt(i) < 48))
                 if(!(String.valueOf(line.charAt(i)).equalsIgnoreCase("E") && dot == 1))
                     return false;
                 else if(line.charAt(i+1) == '-')
                     i++;
+                if(dot > 1)
+                    return false;
         }
         // the input is valid number
         return true;
