@@ -11,9 +11,8 @@ public class Main extends Functions{
             // Read input from user
             System.out.print("> ");
             lineInput[0] = input.nextLine();
-        } else{
+        } else
             lineInput = args;
-        }
         // Check
         for (String s : lineInput) {
             if (checkNumber(s))
