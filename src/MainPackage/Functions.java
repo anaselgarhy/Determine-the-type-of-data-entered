@@ -63,6 +63,14 @@ public abstract class Functions {
     public static boolean checkBoolean(String line){
         return (line.equals("true") || line.equals("false"));
     }
+
+    /**
+     * This function retrieves the number of times a certain character is repeated in the string
+     * @param ch The character you want to get the number of times it is repeated
+     * @param line The text in which you want to find the number of times a character is repeated
+     * @param ignoreCase It takes a boolean value, true if you want case to be ignored and false if you want case not to be ignored
+     * @return The number of times the character you put in the variable ch parameter is repeated
+     */
     private static int numOfRebate(char ch, String line, boolean ignoreCase){
         int numOfRebate = 0;
         for(char c: (ignoreCase)? line.toUpperCase().toCharArray() : line.toCharArray())
